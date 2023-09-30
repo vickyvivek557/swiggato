@@ -2,11 +2,11 @@ package com.example.swiggato.model;
 
 import com.example.swiggato.Enum.Gender;
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.Size;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
-import javax.validation.constraints.Email;
-import javax.validation.constraints.Size;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -24,8 +24,8 @@ public class Customer {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     int id;
 
-    @Size(min = 2, message = "{javax.validation.constraints.Size.too_short}")
-    @Size(max = 50, message = "{javax.validation.constraints.Size.too_long}")
+    @Size(min = 2, message = "{validation.name.size.too_short}")
+    @Size(max = 50, message = "{validation.name.size.too_long}")
     String name;
 
     @Column(unique = true, nullable = false)
@@ -36,7 +36,7 @@ public class Customer {
 
     @Column(unique = true, nullable = false)
     @Size(min = 10, max = 10)
-    String mobileNO;
+    String mobileNo;
 
     @Enumerated(EnumType.STRING)
     Gender gender;

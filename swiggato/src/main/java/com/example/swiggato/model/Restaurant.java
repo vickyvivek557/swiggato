@@ -4,8 +4,8 @@ import com.example.swiggato.Enum.RestaurantCategory;
 import jakarta.persistence.*;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
+import jakarta.validation.constraints.Size;
 
-import javax.validation.constraints.Size;
 import java.util.ArrayList;
 import java.util.List;
 

@@ -5,7 +5,7 @@ import jakarta.persistence.*;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
-import javax.validation.constraints.Size;
+import jakarta.validation.constraints.Size;
 import java.util.ArrayList;
 import java.util.List;
 
