@@ -8,13 +8,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 @FieldDefaults(level = AccessLevel.PRIVATE)
-@NoArgsConstructor
+@RequiredArgsConstructor
 @AllArgsConstructor
-@Getter
-@Setter
 @Entity
 @Builder
-@Data
+@Getter
+@Setter
 @Table(name = "cart")
 public class Cart {
     @Id

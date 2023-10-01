@@ -27,6 +27,7 @@ public class Restaurant {
 
     String location;
 
+    @Enumerated(EnumType.STRING)
     RestaurantCategory restaurantCategory;
 
     @Column(nullable = false, unique = true)
