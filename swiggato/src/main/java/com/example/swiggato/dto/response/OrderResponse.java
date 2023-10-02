@@ -1,18 +1,19 @@
 package com.example.swiggato.dto.response;
 
-import com.example.swiggato.model.Customer;
-import com.example.swiggato.model.DeliveryPartner;
-import com.example.swiggato.model.Restaurant;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
-import org.hibernate.annotations.CreationTimestamp;
+import lombok.*;
+import lombok.experimental.FieldDefaults;
 
 import java.util.Date;
 import java.util.List;
 
+@FieldDefaults(level = AccessLevel.PRIVATE)
+@Builder
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class OrderResponse {
 
-    String orderId; //UUID
+    String orderId;
 
     double orderTotal;
 
